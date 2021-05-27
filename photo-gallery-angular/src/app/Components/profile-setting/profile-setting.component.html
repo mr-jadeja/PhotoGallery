@@ -1,0 +1,60 @@
+<div class="setting_main">
+  <app-indexheader></app-indexheader>
+  <div class="container">
+
+    <div class="wrapper bg-white mt-sm-5">
+        <h4 class="pb-4 border-bottom">Profile settings</h4>
+        <!-- <div class="d-flex align-items-start py-3 border-bottom"> <img src="https://images.pexels.com/photos/1037995/pexels-photo-1037995.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" class="img" alt="">
+            <div class="pl-sm-4 pl-2" id="img-section"> <b>Profile Photo</b>
+                <p>Accepted file type .png .jpg .jpeg.</p> <button class="btn btn-outline-success"><b>Upload</b></button>
+            </div>
+        </div> -->
+        <div class="py-2">
+          <form action="" #profile="ngForm" [formGroup]="profileform" id="profile">
+            <div *ngIf="msgExtra">
+              <div class="mb-3" *ngIf="success">
+                <div class="alert alert-success" role="alert">
+                  {{ msgExtra }}
+                </div>
+              </div>
+              <div class="mb-3" *ngIf="!success">
+                <div class="alert alert-danger" role="alert">
+                  {{ msgExtra }}
+                </div>
+              </div>
+            </div>
+
+            <div class="row py-2">
+                <div class="col-md-6">
+                  <label for="firstname">First Name</label>
+                  <input type="text" formControlName="firstname" name="firstname" class="bg-light form-control" [(ngModel)]="user.first_name">
+                  <span *ngIf="profileform.get('firstname').invalid && profileform.get('firstname').touched" class="text-danger">First Name is required !!</span>
+                </div>
+                <div class="col-md-6 pt-md-0 pt-3">
+                  <label for="lastname">Last Name</label>
+                  <input type="text" formControlName="lastname" name="lastname" class="bg-light form-control" [(ngModel)]="user.last_name">
+                  <span *ngIf="profileform.get('lastname').invalid && profileform.get('lastname').touched" class="text-danger">Last Name is required !!</span>
+                </div>
+            </div>
+            <div class="row py-2">
+
+              <div class="col-md-6">
+                <label for="password">Password</label>
+                <input type="password" formControlName="password" name="password" class="bg-light form-control" [(ngModel)]="user.password">
+                <span *ngIf="profileform.get('password').invalid && profileform.get('password').touched" class="text-danger">Minimum 8 characters required !!</span>
+              </div>
+            </div>
+            <div class="py-3 pb-4 border-bottom"> <button type="submit" [disabled]="profileform.invalid" (click)="updateuser()" class="btn btn-success mr-3">Save Changes</button>  </div>
+          </form>
+
+
+            <div class="d-sm-flex align-items-center pt-3" id="deactivate">
+                <div> <b>Deactivate your account</b>
+                    <p>Details about your company account and password</p>
+                </div>
+                <div class="ml-auto"> <button (click)="deleteuser()" class="btn danger">Deactivate</button> </div>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>

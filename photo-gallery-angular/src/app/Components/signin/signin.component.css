@@ -1,0 +1,155 @@
+/* .signin__main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.signin__body {
+  display: flex;
+  justify-content: center;
+  width: 400px;
+  height: 300px;
+  border: 1px solid rgba(219, 219, 219, 1);
+  border-radius: 6px;
+  transition: 0.45s all ease-in-out;
+  background-color: rgba(0, 0, 0, 0.185);
+  object-fit: contain;
+}
+
+.signin__body:hover {
+  width: 420px;
+  height: 320px;
+}
+.signin__form {
+  object-fit: contain;
+}
+
+.signin__header {
+  font-size: 30px;
+  text-transform: uppercase;
+  align-items: center;
+
+  letter-spacing: 1px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+  font-weight: 300;
+  transition: 0.5s all ease-in-out;
+}
+.signin__header:hover {
+  font-size: 32px;
+}
+
+.form-control {
+  background-color: rgba(255, 253, 253, 0.562);
+  margin-top: 20px;
+  border: none;
+  width: 300px;
+}
+
+.form-control:focus {
+  background-color: aliceblue;
+  border-color: none !important;
+  box-shadow: none;
+}
+
+.form-group {
+  margin-top: 10px;
+}
+
+.form__dob {
+  margin-top: none !important;
+}
+
+.signin__btn__main {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.signin__btn {
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  text-align: end;
+  border: none;
+  color: rgb(228, 228, 228);
+  transition: 0.3s all ease-in-out;
+  margin: 10px 0px;
+} */
+
+.signin__main {
+  overflow-y: hidden;
+}
+
+.container {
+  margin-top: 50px;
+}
+
+#createform {
+  display: block;
+  width: 350px;
+  height: auto;
+  background-color: whitesmoke;
+  border: none;
+  padding: 10px;
+  border-radius: 50px 20px;
+  min-width: max-content;
+  color: rgb(36, 36, 36);
+  transform: rotate(0deg);
+  box-shadow: 15px 15px 10px 10px rgb(36, 36, 36);
+  margin-top: 25px;
+}
+
+#sub-two {
+  margin-top: 50px;
+  transform: rotate(-40deg);
+}
+
+#sub-one {
+  transform: rotate(30deg);
+}
+.card {
+  background-color: whitesmoke;
+  width: min-content !important;
+  height: max-content !important;
+  padding: 0% !important;
+}
+.mobile {
+  display: flex;
+}
+
+.first-card {
+  width: 280px;
+}
+#second-one {
+  margin-top: 15px;
+  transform: rotate(40deg);
+}
+#second-two {
+  margin-top: 50px;
+  margin-right: 50px;
+  transform: rotate(-40deg);
+}
+.second-card {
+  width: 300px;
+}
+
+.card-img {
+  width: 300px;
+  height: 400px;
+}
+
+@media (max-width: 767px) {
+  .mobile {
+    display: none;
+  }
+}
+
+.signup-header {
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: darkblue;
+}
+.form-control.ng-invalid.ng-touched{
+  border: 1px solid red;
+}

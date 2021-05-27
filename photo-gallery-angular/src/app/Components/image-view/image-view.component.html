@@ -1,0 +1,118 @@
+<div class="imageview__main">
+  <app-indexheader></app-indexheader>
+  <div class="imageview__body">
+    <app-upload-image></app-upload-image>
+    <!-- <div class="row">
+      <div class="col-sm-4">
+        <div class="card" style="width: 18rem;">
+          <img src="../../../assets/Static/imageview.jpg" class="card-img-top" alt="...">
+          <div class="card-caption">
+            <span class="card-caption-text"> Caption</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-4">
+        <div class="card" style="width: 18rem;">
+          <img src="../../../assets/Static/imageview.jpg" class="card-img-top" alt="...">
+          <div class="card-caption">
+            <span class="card-caption-text"> Caption</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="card" style="width: 18rem;">
+          <img src="../../../assets/Static/imageview.jpg" class="card-img-top" alt="...">
+          <div class="card-caption">
+            <span class="card-caption-text"> Caption</span>
+
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="card" style="width: 18rem;">
+          <img src="../../../assets/Static/imageview.jpg" class="card-img-top" alt="...">
+          <div class="card-caption">
+            <span class="card-caption-text"> Caption</span>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+    <div class="row container" *ngIf="images.length != 0">
+      <div class="col-sm-3" *ngFor="let image of images">
+        <div class="card" data-toggle="modal" [attr.data-target]="'#a'+image._id">
+          <img src="{{ imagepath }}{{ image.name }}" class="card-img-top card-img " alt="...">
+          <div class="card-caption outsidemodel">
+            <span class="card-caption-text"> {{ image.caption }} </span>
+
+          </div>
+        </div>
+
+        <div class="modal fade" [attr.id]="'a'+image._id" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered modalImageDialog  ">
+            <div class="modal-content">
+              <div class="modal-body modalBlock">
+                <img src="{{ imagepath }}{{ image.name }}" class="modalImage" alt="...">
+                <div class="card-caption">
+                  <span class="card-caption-text"> {{ image.caption }}</span>
+                  <button class=" btn btn-secondary card-delete pull-right" (click)="delete_photo(image._id)" ><i class="fa fa-trash-o" ></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div class="col-sm-3">
+        <div class="card" style="width: 18rem;">
+          <img src="../../../assets/Static/Extra Background/2.jpg" class="card-img-top card-img" alt="...">
+          <div class="card-caption">
+            <span class="card-caption-text"> Caption</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="card" style="width: 18rem;">
+          <img src="../../../assets/Static/Extra Background/3.jpg" class="card-img-top card-img" alt="...">
+          <div class="card-caption">
+            <span class="card-caption-text"> Caption</span>
+
+          </div>
+        </div>
+      </div> -->
+      <!-- <div class="col-sm-3">
+        <div class="card" style="width: 18rem;">
+          <img src="../../../assets/Static/Extra Background/4.jpg" class="card-img-top card-img" alt="...">
+          <div class="card-caption">
+            <span class="card-caption-text"> Caption</span>
+          </div>
+        </div>
+      </div> -->
+      <!-- <div class="col-sm-3">
+        <div class="card" style="width: 18rem;">
+          <img src="../../../assets/Static/Extra Background/5.jpg" class="card-img-top card-img" alt="...">
+          <div class="card-caption">
+            <span class="card-caption-text"> Caption</span>
+          </div>
+        </div>
+      </div> -->
+      <!-- <div class="col-sm-3">
+        <div class="card" style="width: 18rem;">
+          <img src="../../../assets/Static/Extra Background/6.jpg" class="card-img-top card-img" alt="...">
+          <div class="card-caption">
+            <span class="card-caption-text"> Caption</span>
+          </div>
+        </div>
+      </div> -->
+      <!-- <div class="col-sm-3">
+        <div class="card" style="width: 18rem;">
+          <img src="../../../assets/Static/Extra Background/1.jpg" class="card-img-top card-img" alt="...">
+          <div class="card-caption">
+            <span class="card-caption-text"> Caption</span>
+          </div>
+        </div>
+      </div> -->
+    </div>
+  </div>
+</div>

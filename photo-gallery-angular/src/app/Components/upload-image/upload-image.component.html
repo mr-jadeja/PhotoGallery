@@ -1,0 +1,54 @@
+<div class="uploadImage__main">
+
+  <!-- UploadImage Button -->
+  <div class="imageview__btn__main">
+    <button class="btn imageview__btn btn-outline-secondary" data-toggle="modal" data-target="#exampleModal">
+      <!-- <img -->
+      <!-- src="../../../assets/Static/Icons//add_circle_outline_white_24dp.svg" /> -->
+      <span class="fa fa-upload fa-lg"></span>
+      &nbsp;Upload Image
+    </button>
+  </div>
+
+  <!-- UploadImage Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Upload Image</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form [formGroup]="uploadformmy" id="uploadform" enctype="multipart/form-data" #uploadform="ngForm">
+            <div *ngIf="msgExtra">
+              <div class="mb-3" *ngIf="success">
+                <div class="alert alert-success" role="alert">
+                  {{ msgExtra }}
+                </div>
+              </div>
+              <div class="mb-3" *ngIf="!success">
+                <div class="alert alert-danger" role="alert">
+                  {{ msgExtra }}
+                </div>
+              </div>
+            </div>
+            <input type="file" formControlName="image" name="image" class="form-control uploadImage" (change)="selectImage($event)" placeholder="Upload Image">
+            <span *ngIf="uploadformmy.get('image').invalid && uploadformmy.get('image').touched" class="text-danger">Image is required !!</span>
+
+
+            <input type="text" formControlName="caption" class="form-control uploadCaption" name="caption" [(ngModel)]="photos.caption" id="caption" placeholder="Caption">
+            <span *ngIf="uploadformmy.get('caption').invalid && uploadformmy.get('caption').touched" class="text-danger">caption is required !!</span>
+
+            <div class="uploadButtons">
+              <button type="button" class="btn btn-outline-secondary"  data-dismiss="modal">Close</button>
+              <button type="submit" [disabled]="uploadformmy.invalid" class="btn btn-outline-primary" (click)="upload_photo()">Upload</button>
+
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

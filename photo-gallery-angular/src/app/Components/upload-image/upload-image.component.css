@@ -1,0 +1,49 @@
+.imageview__btn {
+  border: none !important;
+  transition: 0.5s all ease-in-out;
+  padding: 10px 25px;
+  margin-bottom: 15px;
+}
+
+.modal-header {
+  background: linear-gradient(
+    to bottom,
+    rgb(224, 244, 255),
+    rgba(224, 244, 255, 0.7)
+  );
+}
+
+.modal-body {
+  background: linear-gradient(
+    to bottom,
+    rgba(224, 244, 255, 0.7),
+    rgba(224, 244, 255, 0)
+  );
+}
+
+.modal-title {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.form-control {
+  margin: 10px 0px;
+}
+
+.uploadImage {
+  border: none;
+  padding: 0%;
+  background-color: rgba(240, 248, 255, 0);
+}
+
+.uploadButtons {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.uploadButtons > button {
+  margin: 5px;
+  border: none !important;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}

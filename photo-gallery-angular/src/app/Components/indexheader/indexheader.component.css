@@ -1,0 +1,14 @@
+.navbar {
+  background-color: #46577500;
+  color: black;
+}
+
+.navbar ul li {
+  margin-left: 10px;
+}
+#maintitle {
+  color: black;
+  font-size: 25px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}

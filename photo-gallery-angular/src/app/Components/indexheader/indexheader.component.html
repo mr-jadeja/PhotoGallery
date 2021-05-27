@@ -1,0 +1,29 @@
+<nav class="navbar  navbar-expand-sm">
+  <div class="container-fluid">
+
+      <a id="maintitle" class="navbar-brand mr-auto" href="#">
+          Photogallery
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
+          <span class="navbar-toggler-icon"></span> Menu
+      </button>
+      <div class="collapse navbar-collapse" id="Navbar">
+          <ul class="navbar-nav ml-auto">
+              <li class="nav-item dropdown ml-3">
+                  <a class="btn dropdown-toggle dropdown-toggle-split d-inline nav-link mr-4" type="button"
+                      id="navbarDropdown" data-toggle="dropdown">{{ username | uppercase}}<span
+                          class="fa fa-user-circle-o fa-lg ml-1"></span> </a>
+                  <div class="dropdown-menu mr-4" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" (click)="profile_open()"><span
+                              class="fa fa-user-circle-o fa-lg mr-2"></span>Profile Setting</a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" routerLink="/signin/"><span class="fa fa-sign-out fa-lg mr-2"></span>Log Out</a>
+                  </div>
+              </li>
+              <!-- <li class="nav-item "><button type="button" class="btn btn-outline-danger logoutBtn">Logout</button> </li> -->
+
+
+          </ul>
+      </div>
+  </div>
+</nav><br><br>
